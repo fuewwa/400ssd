@@ -1,0 +1,5 @@
+build/
+config.h
+400ssd
+*.o
+*.tar.gz

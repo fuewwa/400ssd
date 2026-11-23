@@ -1,0 +1,74 @@
+.TH 400SSD
+.SH NAME
+400ssd \- 400 SSD Term, a lightweight terminal emulator for X11
+.SH SYNOPSIS
+.B 400ssd
+.RB [ \-v ]
+.RB [ \-f
+.IR font ]
+.RB [ \-t
+.IR title ]
+.RB [ \-c
+.IR class ]
+.RB [ \-e
+.IR command
+.RI [ arguments ...]]
+.SH DESCRIPTION
+.B 400ssd
+is a small terminal emulator written in C on top of Xlib and Xft.
+It is configured at compile time by editing
+.IR config.h .
+.SH OPTIONS
+.TP
+.B \-v
+Print the version and exit.
+.TP
+.BI \-f " font"
+Use the given fontconfig font description instead of the default.
+.TP
+.BI \-t " title"
+Set the initial window title.
+.TP
+.BI \-c " class"
+Set the WM_CLASS instance and class of the window.
+.TP
+.BI \-e " command " [ arguments ...]
+Run the command instead of the shell. This option must be the last one.
+.SH KEY BINDINGS
+.TP
+.B Ctrl+Shift+C
+Copy the selection to the CLIPBOARD.
+.TP
+.B Ctrl+Shift+V
+Paste from the CLIPBOARD.
+.TP
+.B Shift+Insert
+Paste from the PRIMARY selection.
+.TP
+.B Shift+PageUp, Shift+PageDown
+Scroll the history by one page.
+.SH MOUSE
+.TP
+.B Left button
+Select text. A double click selects a word and a triple click selects a line.
+.TP
+.B Middle button
+Paste the PRIMARY selection.
+.TP
+.B Wheel
+Scroll the history. On the alternate screen the wheel sends arrow keys.
+.SH ENVIRONMENT
+.TP
+.B SHELL
+Shell started when no command is given.
+.PP
+The child process receives TERM, COLORTERM and WINDOWID.
+.SH CONFIGURATION
+Edit
+.I config.h
+and rebuild. The file is created from
+.I config.h.def
+on the first build.
+.SH SEE ALSO
+.BR xterm (1),
+.BR fonts-conf (5)

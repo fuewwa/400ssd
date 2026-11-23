@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Name=400 SSD
+GenericName=Terminal Emulator
+Comment=Lightweight terminal emulator for X11
+Exec=400ssd
+Icon=utilities-terminal
+Terminal=false
+StartupNotify=false
+Categories=System;TerminalEmulator;
+Keywords=shell;prompt;command;commandline;cmd;console;
+StartupWMClass=400ssd
